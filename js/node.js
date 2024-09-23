@@ -86,7 +86,7 @@ function getCalculateInput(id1, id2) {
     const decreaseAmount = mainAmount - inputDonationValue;
     document.getElementById(id1).innerText = addDonation;
     document.getElementById("main-amount").innerText = decreaseAmount;
-    inputDonationValue.value = "";
+    document.getElementById(id2).value = "";
     modalBtn.showModal();
   }
 }
