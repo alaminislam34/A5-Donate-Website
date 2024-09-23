@@ -85,6 +85,190 @@
         </button>
       </div>
     </header>
+    <main class="my-10 py-20 space-y-8 bg-white">
+      <!-- donation section -->
+      <section id="donation-section">
+        <section
+          class="grid grid-cols-2 gap-8 w-11/12 mx-auto p-8 border border-ash/10 rounded-xl"
+        >
+          <img src="./assets/noakhali.png" alt="" />
+
+          <div class="space-y-6">
+            <div class="text-left space-y-4">
+              <button class="flex gap-3 items-center bg-ash/5 py-3 px-4">
+                <img src="./assets/coin.png" alt="" />
+                <p class="font-semibold text-base text-ash/70">
+                  <span id="total-donation-amount">600</span> BDT
+                </p>
+              </button>
+              <h2 id="donate-noakhali" class="text-ash font-bold text-xl">
+                Donate for Flood at Noakhali, Bangladesh
+              </h2>
+              <p class="text-ash/70 font-light text-base">
+                The recent floods in Noakhali have caused significant damage to
+                homes infrastructure. Your donation will help provide essential
+                supplies and to those affected by this disaster. Every
+                contribution, big or small, makes difference. Please join us in
+                supporting the relief efforts and making a positive impact on
+                the lives of those in need.
+              </p>
+            </div>
+            <div>
+              <div class="space-y-4">
+                <input
+                  id="floot-donation-input"
+                  type="number"
+                  placeholder="Write Donation Amount"
+                  class="text-ash/40 w-full p-[18px] border border-ash/10 rounded-lg"
+                />
+                <!-- <p
+                  id="donation-input-error-message"
+                  class="py-2 text-red-500 hidden"
+                >
+                  ⚠️ invalid input amount.
+                </p> -->
+              </div>
+            </div>
+            <button
+              onclick="getCalculateInput('total-donation-amount', 'floot-donation-input'), addHistory('floot-donation-input', 'donate-noakhali')"
+              class="bg-primary py-4 w-full rounded-lg text-ash font-bold text-xl"
+            >
+              Donate Now
+            </button>
+          </div>
+        </section>
+        <section
+          class="grid grid-cols-2 gap-8 w-11/12 mx-auto p-8 border border-ash/10 rounded-xl"
+        >
+          <img src="./assets/feni.png" alt="" />
+
+          <div class="space-y-6">
+            <div class="text-left space-y-4">
+              <button class="flex gap-3 items-center bg-ash/5 py-3 px-4">
+                <img src="./assets/coin.png" alt="" />
+                <p class="font-semibold text-base text-ash/70">
+                  <span id="floot-feni-donation-amount">600</span> BDT
+                </p>
+              </button>
+              <h2 id="donate-feni" class="text-ash font-bold text-xl">
+                Donate for Flood Relief in Feni,Bangladesh
+              </h2>
+              <p class="text-ash/70 font-light text-base">
+                The recent floods in Feni have devastated local communities,
+                leading to severe disruption and loss. Your generous donation
+                will help provide immediate aid, including food, clean water,
+                and medical supplies, to those affected by this calamity.
+                Together, we can offer crucial support and help rebuild lives in
+                the aftermath of this disaster. Every contribution counts
+                towards making a real difference. Please consider donating today
+                to assist those in urgent need.
+              </p>
+            </div>
+            <div>
+              <div class="space-y-4">
+                <input
+                  id="feni-donation-input"
+                  type="number"
+                  placeholder="Write Donation Amount"
+                  class="text-ash/40 w-full p-[18px] border border-ash/10 rounded-lg"
+                />
+                <!-- <p
+                  id="floot-feni-error-message"
+                  class="py-2 text-red-500 hidden"
+                >
+                  ⚠️ invalid input amount.
+                </p> -->
+              </div>
+            </div>
+            <button
+              onclick="getCalculateInput('floot-feni-donation-amount', 'feni-donation-input', addHistory('feni-donation-input', 'donate-feni'))"
+              class="bg-primary py-4 w-full rounded-lg text-ash font-bold text-xl"
+            >
+              Donate Now
+            </button>
+          </div>
+        </section>
+        <section
+          class="grid grid-cols-2 gap-8 w-11/12 mx-auto p-8 border border-ash/10 rounded-xl"
+        >
+          <img src="./assets/quota-protest.png" alt="" />
+
+          <div class="space-y-6">
+            <div class="text-left space-y-4">
+              <button class="flex gap-3 items-center bg-ash/5 py-3 px-4">
+                <img src="./assets/coin.png" alt="" />
+                <p class="font-semibold text-base text-ash/70">
+                  <span id="quota-donation-total">2400</span> BDT
+                </p>
+              </button>
+              <h2 id="donate-quota" class="text-ash font-bold text-xl">
+                Aid for Injured in the Quota Movement
+              </h2>
+              <p class="text-ash/70 font-light text-base">
+                The recent Quota movement has resulted in numerous injuries and
+                significant hardship for many individuals. Your support is
+                crucial in providing medical assistance, rehabilitation, and
+                necessary supplies to those affected. By contributing, you help
+                ensure that injured individuals receive the care and support
+                they need during this challenging time. Every donation plays a
+                vital role in alleviating their suffering and aiding in their
+                recovery. Please consider making a donation to support these
+                brave individuals in their time of need.
+              </p>
+            </div>
+            <div>
+              <div class="space-y-4">
+                <input
+                  id="quota-donation-input"
+                  type="number"
+                  placeholder="Write Donation Amount"
+                  class="text-ash/40 w-full p-[18px] border border-ash/10 rounded-lg"
+                />
+                <!-- <p
+                  id="quota-input-error-message"
+                  class="py-2 text-red-500 hidden"
+                >
+                  ⚠️ invalid input amount.
+                </p> -->
+              </div>
+            </div>
+            <button
+              onclick="getCalculateInput('quota-donation-total', 'quota-donation-input'), addHistory('quota-donation-input', 'donate-quota')"
+              class="bg-primary py-4 w-full rounded-lg text-ash font-bold text-xl"
+            >
+              Donate Now
+            </button>
+          </div>
+        </section>
+
+        <!-- Open the modal using ID.showModal() method -->
+
+        <dialog
+          id="my_modal_5"
+          class="modal modal-bottom sm:modal-middle text-ash"
+        >
+          <div class="modal-box bg-white justify-center items-center space-y-6">
+            <div class="flex justify-center items-center text-4xl font-bold">
+              Congrates!
+            </div>
+            <div class="flex justify-center items-center">
+              <img src="./assets/coin.png" alt="" />
+            </div>
+            <div class="flex justify-center items-center text-ash/70 text-sm">
+              <p>You have donated for Humankind</p>
+            </div>
+            <div class="flex justify-center items-center">
+              <p class="text-xl font-semibold">Successfully</p>
+            </div>
+            <div class="modal-action justify-center">
+              <form method="dialog">
+                <button class="btn">Close Notification</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+      </section>
+    </main>
     <br /><br /><br />
     <script src="./js/node.js"></script>
   </body>
