@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-5</title>
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- DaisyUi and Tailwind CSS cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- tailwind customize style script -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              primary: "#B4F461",
+              ash: "#111111",
+            },
+            fontFamily: {
+              lexend: "Lexend",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-lexend">
+    <header
+      id="header"
+      class="sticky top-0 z-[1200] bg-[#F9F7F3] bg-opacity-10"
+    >
+      <nav
+        id="navbar"
+        class="flex justify-between items-center w-11/12 mx-auto py-4"
+      >
+        <div>
+          <button
+            onclick="window.location.href = './blog.html'"
+            class="bg-primary py-3 px-8 rounded-lg text-ash font-bold text-xl"
+          >
+            Blog
+          </button>
+        </div>
+        <div class="flex gap-4 items-center justify-center">
+          <img src="./assets/logo.png" alt="" />
+          <p class="text-ash font-bold text-lg">Donate Bangladesh</p>
+        </div>
+        <div class="flex gap-3 items-center justify-center">
+          <img src="./assets/coin.png" alt="" />
+          <p class="font-semibold text-xl text-ash/70">
+            <span id="main-amount">5500</span> BDT
+          </p>
+        </div>
+      </nav>
+      <div
+        id="donation-and-history"
+        class="bg-white flex flex-row gap-4 justify-center py-6"
+      >
+        <button
+          id="donation"
+          class="bg-primary py-3 px-8 rounded-lg text-ash font-bold text-xl"
+        >
+          Donation
+        </button>
+        <button
+          id="history"
+          class="border-2 border-ash/30 py-3 px-8 rounded-lg text-ash/70 font-bold text-xl"
+        >
+          History
+        </button>
+      </div>
+    </header>
+    <br /><br /><br />
+    <script src="./js/node.js"></script>
+  </body>
+</html>
