@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-5</title>
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- DaisyUi and Tailwind CSS cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- tailwind customize style script -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              primary: "#B4F461",
+              ash: "#111111",
+            },
+            fontFamily: {
+              lexend: "Lexend",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-thin.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css"
+    />
+  </head>
+  <body class="font-lexend">
+    <header>
+      <nav
+        id="navbar"
+        class="flex justify-between items-center w-11/12 mx-auto py-4"
+      >
+        <div>
+          <button
+            onclick="window.location.href= './index.html' "
+            class="bg-primary py-3 px-8 rounded-lg text-ash font-bold text-xl"
+          >
+            Home
+          </button>
+        </div>
+        <div class="flex gap-4 items-center justify-center">
+          <img src="./assets/logo.png" alt="" />
+          <p class="text-ash font-bold text-lg">Donate Bangladesh</p>
+        </div>
+        <div class="flex gap-3 items-center justify-center">
+          <img src="./assets/coin.png" alt="" />
+          <p class="font-semibold text-xl text-ash/70">
+            <span id="main-amount">5500</span> BDT
+          </p>
+        </div>
+      </nav>
+    </header>
+    <main class="bg-white">
+      <section class="w-11/12 mx-auto space-y-6 my-20">
+        <h1 class="lg:text-4xl md:text-3xl text-2xl font-bold">
+          IMPORTANT FAQ <i class="fa-light fa-comment-question"></i>
+        </h1>
+        <div class="collapse collapse-arrow bg-[#f7f9f3]">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-semibold">
+            What is the Document Object Model (DOM)?
+          </div>
+          <div class="collapse-content">
+            <p class="text-ash/50">
+              The Document Object Model (DOM) is a programming interface that
+              represents a webpage as a structured tree of objects, allowing
+              scripts to manipulate the content, structure, and styling of HTML
+              or XML documents.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-[#f7f9f3]">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-semibold">
+            How do you select an element from the object?
+          </div>
+          <div class="collapse-content">
+            <p class="text-ash/50">
+              To select an element from the DOM, you can use methods like
+              document.getElementById(), document.querySelector(), or
+              document.getElementsByClassName() to target elements based on
+              their ID, class, or tag.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-[#f7f9f3]">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-semibold">
+            what is event delegation in the context of the DOM, and why is it
+            useful?
+          </div>
+          <div class="collapse-content">
+            <p class="text-ash/50">
+              Event delegation in the DOM allows a single parent element to
+              handle events for its child elements using event bubbling,
+              improving performance and reducing the need for multiple event
+              listeners.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-[#f7f9f3]">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-semibold">
+            How do you manipulate an element's attributes and style using the
+            DOM?
+          </div>
+          <div class="collapse-content">
+            <p class="text-ash/50">
+              You can manipulate an element's attributes using
+              element.setAttribute() and retrieve them with
+              element.getAttribute(). For styles, use element.style.property =
+              'value' to change CSS properties directly.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
