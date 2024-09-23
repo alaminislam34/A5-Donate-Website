@@ -18,8 +18,9 @@ function addHistory(id1, id2){
           </p>
         </div>
     `
-    if( mainAmount > inputDonationValue ){
+    if( mainAmount => inputDonationValue ){
         historyContainer.insertBefore(li, historyContainer.firstChild);
+    }else{
         return;
     }
     
