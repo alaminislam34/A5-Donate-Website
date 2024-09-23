@@ -1,10 +1,11 @@
 //  ADD HISTORY CONTAINER CHILD LI
 
 function addHistory(id1, id2){
+    const inputDonationValue = parseFloat(document.getElementById(id1).value);
+    const mainAmount = parseFloat(document.getElementById('main-amount').innerText);
     const donateAmount = document.getElementById(id1).value;
     const donateLocation = document.getElementById(id2).innerText;
     const historyContainer = document.getElementById('history-container');
-    // const noakhaliDonate = document.getElementById('donate-noakhali').innerText;
     const li = document.createElement('li')
     li.classList.add('list-none');
     li.innerHTML = `
@@ -17,7 +18,11 @@ function addHistory(id1, id2){
           </p>
         </div>
     `
-    historyContainer.insertBefore(li, historyContainer.firstChild);
+    if( mainAmount > inputDonationValue ){
+        historyContainer.insertBefore(li, historyContainer.firstChild);
+        return;
+    }
+    
 }
 
 // NAVBAR SCROLL
@@ -68,6 +73,7 @@ function getCalculateInput(id1, id2){
         document.getElementById(id1).innerText= addDonation;
         document.getElementById('main-amount').innerText= decreaseAmount;
         modalBtn.showModal();
+        
     }
 }
 function showModal(){
