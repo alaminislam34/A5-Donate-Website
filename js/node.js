@@ -22,8 +22,8 @@ function addHistory(id1, id2) {
         </div>
     `;
   if (inputDonationValue <= mainAmount) {
-    // historyContainer.appendChild(li);
     historyContainer.insertBefore(li, historyContainer.firstChild);
+  } else {
     return;
   }
 }
