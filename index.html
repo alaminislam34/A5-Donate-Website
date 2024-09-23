@@ -39,7 +39,7 @@
     <nav id="navbar" class="flex justify-between items-center w-11/12 mx-auto py-4">
       <div>
         <button onclick="window.location.href = './blog.html'"
-          class="bg-primary py-3 px-8 rounded-lg text-ash font-bold text-xl">
+          class="bg-primary md:py-3 md:px-8 py-2 px-4 rounded-lg text-ash font-bold md:text-xl text-base">
           Blog
         </button>
       </div>
@@ -51,25 +51,28 @@
       </div>
       <div class="flex gap-3 items-center justify-center">
         <img src="./assets/coin.png" alt="" />
-        <p class="font-semibold text-xl text-ash/70">
+        <p class="font-semibold md:text-xl text-base text-ash/70">
           <span id="main-amount">5500</span> BDT
         </p>
       </div>
     </nav>
     <div id="donation-and-history" class="bg-white flex flex-row gap-4 justify-center py-6">
-      <button id="donation" class="bg-primary py-3 px-8 rounded-lg text-ash font-bold text-xl">
+      <button id="donation"
+        class="bg-primary md:py-3 md:px-8 py-2 px-5 rounded-lg text-ash font-bold md:text-xl text-base">
         Donation
       </button>
-      <button id="history" class="border-2 border-ash/30 py-3 px-8 rounded-lg text-ash/70 font-bold text-xl">
+      <button id="history"
+        class="border-2 border-ash/30 md:py-3 md:px-8 py-2 px-5 rounded-lg text-ash/70 font-bold md:text-xl text-base">
         History
       </button>
     </div>
   </header>
-  <main class="my-10 py-20 space-y-8 bg-white">
+  <main class="lg:my-10 md:my-8 my-4 lg:py-20 md:py-16 py-4 space-y-8 bg-white">
     <!-- donation section -->
     <section id="donation-section">
-      <section class="grid grid-cols-2 gap-8 w-11/12 mx-auto p-8 border border-ash/10 rounded-xl">
-        <img src="./assets/noakhali.png" alt="" />
+      <section class="grid lg:grid-cols-2 grid-cols-1 gap-8 w-11/12 mx-auto md:p-8 p-4 border border-ash/10 rounded-xl">
+        <div class="rounded-lg"><img class="w-full h-full object-cover rounded-lg" src="./assets/noakhali.png" alt="" />
+        </div>
 
         <div class="space-y-6">
           <div class="text-left space-y-4">
@@ -79,10 +82,10 @@
                 <span id="total-donated-amount">600</span> BDT
               </p>
             </button>
-            <h2 id="donate-noakhali" class="text-ash font-bold text-xl">
+            <h2 id="donate-noakhali" class="text-ash font-bold md:text-xl text-base">
               Donate for Flood at Noakhali, Bangladesh
             </h2>
-            <p class="text-ash/70 font-light text-base">
+            <p class="text-ash/70 font-light md:text-base text-sm">
               The recent floods in Noakhali have caused significant damage to
               homes infrastructure. Your donation will help provide essential
               supplies and to those affected by this disaster. Every
@@ -94,18 +97,19 @@
           <div>
             <div class="space-y-4">
               <input id="floot-donated-input" type="number" placeholder="Write Donation Amount"
-                class="text-ash/40 w-full p-[18px] border border-ash/10 rounded-lg" />
+                class="text-ash w-full md:p-[18px] p-3 md:text-base text-sm border border-ash/10 rounded-lg" />
             </div>
           </div>
           <button
             onclick="getCalculateInput('total-donated-amount', 'floot-donated-input', addHistory('floot-donated-input', 'donate-noakhali'))"
-            class="bg-primary py-4 w-full rounded-lg text-ash font-bold text-xl">
+            class="bg-primary md:py-4 py-3 w-full rounded-lg text-ash font-bold md:text-xl text-base">
             Donate Now
           </button>
         </div>
       </section>
-      <section class="grid grid-cols-2 gap-8 w-11/12 mx-auto p-8 border border-ash/10 rounded-xl">
-        <img src="./assets/feni.png" alt="" />
+      <section class="grid lg:grid-cols-2 grid-cols-1 gap-8 w-11/12 mx-auto md:p-8 p-4 border border-ash/10 rounded-xl">
+        <div class="rounded-lg"><img class="w-full h-full object-cover rounded-lg" src="./assets/feni.png" alt="" />
+        </div>
 
         <div class="space-y-6">
           <div class="text-left space-y-4">
@@ -115,10 +119,10 @@
                 <span id="floot-feni-donation-amount">600</span> BDT
               </p>
             </button>
-            <h2 id="donate-feni" class="text-ash font-bold text-xl">
+            <h2 id="donate-feni" class="text-ash font-bold md:text-xl text-base">
               Donate for Flood Relief in Feni,Bangladesh
             </h2>
-            <p class="text-ash/70 font-light text-base">
+            <p class="text-ash/70 font-light md:text-base text-sm">
               The recent floods in Feni have devastated local communities,
               leading to severe disruption and loss. Your generous donation
               will help provide immediate aid, including food, clean water,
@@ -132,18 +136,19 @@
           <div>
             <div class="space-y-4">
               <input id="feni-donation-input" type="number" placeholder="Write Donation Amount"
-                class="text-ash/40 w-full p-[18px] border border-ash/10 rounded-lg" />
+                class="text-ash w-full md:p-[18px] p-3 md:text-base text-sm border border-ash/10 rounded-lg" />
             </div>
           </div>
           <button
             onclick="getCalculateInput('floot-feni-donation-amount', 'feni-donation-input', addHistory('feni-donation-input', 'donate-feni'))"
-            class="bg-primary py-4 w-full rounded-lg text-ash font-bold text-xl">
+            class="bg-primary md:py-4 py-3 w-full rounded-lg text-ash font-bold md:text-xl text-base">
             Donate Now
           </button>
         </div>
       </section>
-      <section class="grid grid-cols-2 gap-8 w-11/12 mx-auto p-8 border border-ash/10 rounded-xl">
-        <img src="./assets/quota-protest.png" alt="" />
+      <section class="grid lg:grid-cols-2 grid-cols-1 gap-8 w-11/12 mx-auto md:p-8 p-4 border border-ash/10 rounded-xl">
+        <div class="rounded-lg"><img class="w-full h-full object-cover rounded-lg" src="./assets/quota-protest.png"
+            alt="" /></div>
 
         <div class="space-y-6">
           <div class="text-left space-y-4">
@@ -153,10 +158,10 @@
                 <span id="quota-donation-total">600</span> BDT
               </p>
             </button>
-            <h2 id="donate-quota" class="text-ash font-bold text-xl">
+            <h2 id="donate-quota" class="text-ash font-bold md:text-xl text-base">
               Aid for Injured in the Quota Movement
             </h2>
-            <p class="text-ash/70 font-light text-base">
+            <p class="text-ash/70 font-light md:text-base text-sm">
               The recent Quota movement has resulted in numerous injuries and
               significant hardship for many individuals. Your support is
               crucial in providing medical assistance, rehabilitation, and
@@ -171,12 +176,12 @@
           <div>
             <div class="space-y-4">
               <input id="quota-donation-input" type="number" placeholder="Write Donation Amount"
-                class="text-ash/40 w-full p-[18px] border border-ash/10 rounded-lg" />
+                class="text-ash w-full md:p-[18px] p-3 md:text-base text-sm border border-ash/10 rounded-lg" />
             </div>
           </div>
           <button
             onclick="getCalculateInput('quota-donation-total', 'quota-donation-input', addHistory('quota-donation-input', 'donate-quota'))"
-            class="bg-primary py-4 w-full rounded-lg text-ash font-bold text-xl">
+            class="bg-primary md:py-4 py-3 w-full rounded-lg text-ash font-bold md:text-xl text-base">
             Donate Now
           </button>
         </div>
@@ -186,7 +191,7 @@
 
       <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle text-ash">
         <div class="modal-box bg-white justify-center items-center space-y-6">
-          <div class="flex justify-center items-center text-4xl font-bold">
+          <div class="flex justify-center items-center md:text-4xl text-3xl font-bold">
             Congrates!
           </div>
           <div class="flex justify-center items-center">
@@ -196,7 +201,7 @@
             <p>You have donated for Humankind</p>
           </div>
           <div class="flex justify-center items-center">
-            <p class="text-xl font-semibold">Successfully</p>
+            <p class="md:text-xl text-base font-semibold">Successfully</p>
           </div>
           <div class="modal-action justify-center">
             <form method="dialog">

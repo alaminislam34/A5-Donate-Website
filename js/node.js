@@ -10,11 +10,11 @@ function addHistory(id1, id2) {
   const li = document.createElement("li");
   li.classList.add("list-none");
   li.innerHTML = `
-        <div class="p-8 border border-ash/10 rounded-xl space-y-4">
-          <h2 class="text-xl font-bold text-ash">
+        <div class="md:p-8 p-6  border border-ash/10 rounded-xl space-y-4">
+          <h2 class="text-base md:text-xl font-bold text-ash">
             ${inputDonationValue} Taka is donated for ${donateLocation};
           </h2>
-          <p class="text-ash/70">
+          <p class="text-ash/70 md:text-base text-sm">
             Date : ${new Date().toLocaleDateString(
               "en-GB"
             )} ${new Date().toLocaleTimeString()} (Bangladesh Standard Time)
@@ -46,76 +46,26 @@ window.addEventListener("scroll", function () {
 document.getElementById("history").addEventListener("click", function () {
   document
     .getElementById("history")
-    .classList.add(
-      "bg-primary",
-      "py-3",
-      "px-8",
-      "rounded-lg",
-      "text-ash",
-      "font-bold",
-      "text-xl"
-    );
+    .classList.add("bg-primary", "rounded-lg", "text-ash");
   document
     .getElementById("donation")
-    .classList.remove(
-      "bg-primary",
-      "py-3",
-      "px-8",
-      "rounded-lg",
-      "text-ash",
-      "font-bold",
-      "text-xl"
-    );
+    .classList.remove("bg-primary", "rounded-lg", "text-ash");
   document
     .getElementById("donation")
-    .classList.add(
-      "border-2",
-      "border-ash/30",
-      "py-3",
-      "px-8",
-      "rounded-lg",
-      "text-ash/70",
-      "font-bold",
-      "text-xl"
-    );
+    .classList.add("border-2", "border-ash/30", "rounded-lg", "text-ash/70");
   document.getElementById("donation-section").classList.add("hidden");
   document.getElementById("history-section").classList.remove("hidden");
 });
 document.getElementById("donation").addEventListener("click", function () {
   document
     .getElementById("history")
-    .classList.remove(
-      "bg-primary",
-      "py-3",
-      "px-8",
-      "rounded-lg",
-      "text-ash",
-      "font-bold",
-      "text-xl"
-    );
+    .classList.remove("bg-primary", "rounded-lg", "text-ash");
   document
     .getElementById("donation")
-    .classList.add(
-      "bg-primary",
-      "py-3",
-      "px-8",
-      "rounded-lg",
-      "text-ash",
-      "font-bold",
-      "text-xl"
-    );
+    .classList.add("bg-primary", "rounded-lg", "text-ash");
   document
     .getElementById("history")
-    .classList.add(
-      "border-2",
-      "border-ash/30",
-      "py-3",
-      "px-8",
-      "rounded-lg",
-      "text-ash/70",
-      "font-bold",
-      "text-xl"
-    );
+    .classList.add("border-2", "border-ash/30", "rounded-lg", "text-ash/70");
   document.getElementById("donation-section").classList.remove("hidden");
   document.getElementById("history-section").classList.add("hidden");
 });
@@ -136,6 +86,7 @@ function getCalculateInput(id1, id2) {
     const decreaseAmount = mainAmount - inputDonationValue;
     document.getElementById(id1).innerText = addDonation;
     document.getElementById("main-amount").innerText = decreaseAmount;
+    inputDonationValue.value = "";
     modalBtn.showModal();
   }
 }
